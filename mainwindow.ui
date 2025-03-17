@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>467</width>
+    <height>363</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>User Login</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ===== WORKING DARK THEME (TESTED) ===== */
+/* Main Window Background */
+QMainWindow {
+    background-color: #0a192f; /* Navy Blue */
+    background-image: radial-gradient(circle, 
+        rgba(255,255,255,0.1) 1.5px, 
+        transparent 2px);
+    background-size: 20px 20px;
+}
+
+/* सभी Widgets के Base Styles */
+QWidget {
+    color: #ffffff;
+    font-family: 'Segoe UI';
+    font-size: 14px;
+}
+
+/* Input Fields (Working Version) */
+QLineEdit, QTextEdit, QSpinBox {
+    background: rgba(16, 42, 74, 0.8);
+    border: 2px solid #48cae4;
+    border-radius: 5px;
+    padding: 10px;
+    color: #ffffff;
+    selection-background-color: #00b4d8;
+}
+
+/* Input Focus Effect */
+QLineEdit:focus, QTextEdit:focus {
+    border-color: #00b4d8;
+    box-shadow: 0 0 10px rgba(0, 180, 216, 0.3);
+}
+
+/* बटनों के लिए Guaranteed Working Style */
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #00b4d8, stop:1 #023e8a);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 25px;
+    min-width: 100px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #00cec9, stop:1 #03045e);
+}
+
+QPushButton:pressed {
+    background: #0096c7;
+}
+
+/* Scrollbar Fix */
+QScrollBar:vertical {
+    background: #1a2f4f;
+    width: 12px;
+}
+
+QScrollBar::handle:vertical {
+    background: #00b4d8;
+    border-radius: 6px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="username_edit">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="placeholderText">
+           <string>Username</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="username">
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>-1</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Username</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="password_edit">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="echoMode">
+           <enum>QLineEdit::EchoMode::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>Password</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="password">
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>-1</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Password</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="QPushButton" name="login_btn">
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>-1</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Login</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>467</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
